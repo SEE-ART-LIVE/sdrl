@@ -1,15 +1,13 @@
 <template>
-<div id="app">
-  <div v-if="this.$store.getters.loading" id="load-component" :class="{ 'fadeout' : !this.$store.getters.loading }">
-    <!-- <img :src="require('@/assets/gg_lockup_v3@3x.svg')">-->
+  <div id="app" class="Prose">
+    <div v-if="this.$store.getters.loading" id="load-component"><div class="parent"><div class="child">Loading ...</div></div></div>
+  	<Nav v-if="!this.$store.getters.loading" v-cloak></Nav>
+    <router-view v-if="!this.$store.getters.loading" :arr="this.$store.state.site" v-cloak></router-view>
   </div>
-  <router-view v-if="!this.$store.getters.loading" :arr="this.$store.state.site" v-cloak>
-  </router-view>
-</div>
 </template>
 
 <script>
-import store from './router/store'
+import store from './store'
 
 export default {
   name: 'app',
@@ -19,14 +17,6 @@ export default {
   }
 }
 </script>
-
-<style>
-#app {
-}
-[v-cloak] {
-  display: none;
-}
-</style>
 
 <style lang="scss">
 #app {
