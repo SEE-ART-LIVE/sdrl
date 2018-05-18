@@ -1,0 +1,19 @@
+[
+    {
+        "title": "127.0.0.1",
+        "link": "/"
+    },
+    {
+        "id": 1,
+        "title": "Work",
+        "link": "/work"
+    },
+    {
+        "title": "Contact",
+        "link": "/contact"
+    },
+    {
+        "title": "About",
+        "link": "/about"
+    }
+]

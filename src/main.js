@@ -3,6 +3,9 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import './registerServiceWorker';
+import Nav from './components/Nav'
+
+Vue.component('Nav', Nav)
 
 require('./assets/scss/main.scss');
 require('./assets/scss/main.scss')
