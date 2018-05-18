@@ -1,12 +1,32 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+<div id="app">
+  <div v-if="this.$store.getters.loading" id="load-component" :class="{ 'fadeout' : !this.$store.getters.loading }">
+    <!-- <img :src="require('@/assets/gg_lockup_v3@3x.svg')">-->
   </div>
+  <router-view v-if="!this.$store.getters.loading" :arr="this.$store.state.site" v-cloak>
+  </router-view>
+</div>
 </template>
+
+<script>
+import store from './router/store'
+
+export default {
+  name: 'app',
+  props: ['arr'],
+  created () {
+    store.dispatch('LOAD_DATA', this.$route)
+  }
+}
+</script>
+
+<style>
+#app {
+}
+[v-cloak] {
+  display: none;
+}
+</style>
 
 <style lang="scss">
 #app {
