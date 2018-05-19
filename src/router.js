@@ -1,21 +1,22 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Index from './components/Index.vue';
-import About from './views/About.vue';
+import Homepage from './components/Homepage.vue';
 
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'index',
-      component: Index,
+      name: 'Homepage',
+      component: Homepage,
     },
     {
-      path: '/about',
-      name: 'about',
-      component: About,
-    },
+      path: '/:event',
+      name: 'index',
+      component: Index,
+    }
   ],
 });
