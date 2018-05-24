@@ -4,13 +4,13 @@
             <div class="container">
                 <div class="columns">
                   <div class="column is-8 is-primary has-text-dark m1">
-                    <h1 class="h1">Seadrill !</h1>
+                  <h1 class="h1">SEE ART LIVE 🎨</h1>
                   </div>
                 </div>
                 <div class="columns">
                   <div class="column is-8 is-primary has-text-dark m1">
                     <h2 class="h2">{{this.$route.path}}</h2>
-                    <div class="background-image" style="background-image:url(http://via.placeholder.com/1920x1920/a5s/000000?text=event-image);"></div>
+                    <div class="background-image" style="background-image:url(https://via.placeholder.com/1920x1920/a5s/000000?text=event-image);"></div>
                     <h3 class="h3"><span class="date">05/12/2018</span><span class="time">  8:00 pm</span></h3>
                     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
                   </div>
@@ -22,7 +22,7 @@
                          <GmapMap style="width: 100%; height: 200px; margin-bottom:20px;" :zoom="25" :center="{lat: this.currentLocation.lat, lng: this.currentLocation.lng}" ref="map">
                             <GmapMarker v-for="(marker, index) in markers" :key="index" :position="marker.latLng"/>
                          </GmapMap>
-                     <div class="background-image" style="background-image:url(http://via.placeholder.com/1920x1920/a5s/000000?text=location-image);"></div>
+                     <div class="background-image" style="background-image:url(https://via.placeholder.com/1920x1920/a5s/000000?text=location-image);"></div>
                      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
                   </div>
                 </div>
